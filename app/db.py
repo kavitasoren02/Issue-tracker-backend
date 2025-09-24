@@ -5,7 +5,7 @@ from functools import lru_cache
 
 @lru_cache(maxsize=1)
 def get_mongo_client() -> AsyncIOMotorClient:
-    uri = os.getenv("MONGODB_URI", "mongodb://localhost:27017")
+    uri = os.getenv("MONGODB_URI", "mongodb+srv://kavitasoren2000_db_user:CZGioeHeTshWOdlp@cluster0.hb1eibt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
     return AsyncIOMotorClient(uri)
 
 def get_db() -> AsyncIOMotorDatabase:
